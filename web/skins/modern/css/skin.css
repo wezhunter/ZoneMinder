@@ -1,0 +1,710 @@
+/*
+ * ZoneMinder Base Stylesheet, $Date: 2008-07-25 10:48:16 +0100 (Fri, 25 Jul 2008) $, $Revision: 2612 $
+ * Copyright (C) 2001-2008 Philip Coombes
+ * 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) input[type=password], any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ */ 
+
+/*
+ * Primary look and feel styles
+ */
+
+body {
+    color: #333333;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: center;
+}
+
+h1 {
+    font-family: inherit;
+    font-size: 120%;
+    color: #000066;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-family: inherit;
+    font-size: 125%;
+    color: #000066;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: inherit;
+    font-size: 100%;
+    color: #016A9d;
+    font-weight: bold;
+}
+
+h4 {
+    font-family: inherit;
+    font-size: 100%;
+    color: #016A9d;
+}
+
+p {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+th {
+    font-weight: bold;
+    color: #016A9d;
+}
+
+a:link {
+    color: #7f7fb2;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #7f7fb2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666699;
+    text-decoration: underline;
+}
+
+input,textarea,select {
+    border: 1px #7f7fb2 solid;
+    font-family: inherit;
+    font-size: 100%;
+    color: #333333;
+}
+
+input[type=text], input[type=password], textarea {
+    padding: 1px;
+}
+
+input.noborder {
+    border: 0;
+}
+
+input[disabled] {
+    color: #888888;
+}
+
+img.normal {
+    border: white solid 1px;
+}
+
+img.alarm {
+    border: red solid 1px;
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    border: 0;
+    color: #7f7fb2;
+    background-color: #7f7fb2;
+}
+
+/*
+ * Tabbed headings
+ */
+ul.tabList {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 -4px 0;
+    white-space: nowrap;
+    text-align: left;
+}
+
+ul.tabList li {
+    float: left;
+    border: 1px solid;
+    color: #333333;
+    border: #7f7fb2 solid 1px;
+    border-bottom-width: 0;
+    margin: 0 2px 0 0;
+    background: #dddddd;
+    text-align: center;
+    padding: 3px 4px;
+}
+
+ul.tabList li a {
+    text-decoration: none;
+}
+
+ul.tabList li:hover {
+    background-color: #eeeeee;
+}
+
+ul.tabList li.active {
+    background-color: #ffffff;
+    border-bottom: #7f7fb2 dotted 1px;
+}
+
+ul.tabList li.active a {
+    font-weight: bold;
+}
+
+/*
+ * Major league table for multiple inputs or presentation
+ */
+
+
+#content table.major {
+    margin: 4px auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#content table.major tr.highlight {
+    background-color: #eeeeee;
+}
+
+#content table.major thead tr th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    vertical-align: middle;
+}
+
+#content table.major tfoot td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    vertical-align: middle;
+}
+
+#content table.major th, #content table.major td {
+    border: 1px solid #7f7fb2;
+    padding: 3px;
+    text-align: left;
+}
+
+#content table.major th {
+    vertical-align: bottom;
+}
+
+#content table.major td {
+    vertical-align: middle;
+}
+
+#content table.major th[scope=row] {
+    padding: 4px 3px 3px;
+    vertical-align: top;
+}
+
+#content table.major .colMark, #content table.major .colSelect {
+    text-align: center;
+}
+/*
+ * Lesser table for very simple forms
+ */
+
+#content table.minor {
+    width: 200px;
+    margin: 0 auto;
+}
+
+#content table.minor td {
+    padding: 4px;
+}
+
+#content table.minor .colLeft {
+    width: 50%;
+    text-align: right;
+}
+
+#content table.minor .colRight {
+    width: 50%;
+    text-align: left;
+}
+
+#content table.minor input[type=submit]
+{
+    margin-top: 8px;
+    padding: 0 2px;
+    font-size: 120%;
+}
+
+/*
+ * Behavior classes
+ */
+.errorText {
+    color: #dc143c;
+}
+
+.warnText {
+    color: #ff8c00;
+}
+
+.infoText {
+    color: #688e23;
+}
+
+.disabledText {
+    font-style: italic;
+}
+
+/*
+ * Generic useful classes, especially with mootools
+ */
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+div.clear {
+    clear: both;
+}
+
+/*
+ * Primary layout styles
+ */
+
+#header {
+    background-color:#cccccc;
+    border-bottom:2px solid #336699;
+    line-height: 24px;
+    margin:0 auto;
+    padding:0 10px;
+    text-align: left;
+}
+
+#header h2 {
+    left: 0;
+}
+
+#headerControl {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#headerButtons {
+    float: right;
+}
+
+#headerButtons a {
+    margin-left: 8px;
+}
+
+#content {
+ padding:0 5px;
+}
+
+#content #infobar {
+ margin:5px 0;
+}
+
+#content p {
+    margin-top: 4px;
+}
+
+#content p.textblock {
+    text-align: justify;
+    padding: 4px;
+}
+
+/*
+#contentDiv {
+    margin: 0 auto 8px;
+    line-height: 140%;
+    text-align: center;
+}
+*/
+
+#content > input[type=submit], #content > input[type=button] {
+    margin-top: 8px;
+}
+
+#content table input[type=submit], #content table input[type=button] {
+    margin-top: 0;
+}
+
+#contentButtons {
+    margin-top: 8px;
+    float: right;
+}
+
+#contentButtons input {
+    margin-left: 8px;
+    margin-bottom: 4px;
+}
+
+#footer {
+ background-color:#cccccc;
+ border-top:2px solid #336699;
+ border-bottom:2px solid #336699;
+ clear:both;
+ margin-top:10px;
+ padding:4px 8px;
+ text-align:right;
+}
+
+/* TABS */
+#yui-b{
+ float:right;
+ margin-left:-25em;
+ width:100%;
+}
+#tabs_events{
+ margin-left:14.8461em;
+ float:none;
+ width:auto;
+ position: static;
+}
+.pagemark{
+ background-color:#FAD42E;
+ font-weight:bold;
+ padding:3px 0;
+}
+/* END TABS */
+
+#monitors{
+ margin:0 auto;
+}
+
+#monitors li{
+ background-color:#eeeeee;
+ -moz-border-radius:5px;
+ -webkit-border-radius:5px;
+ border:2px solid #336699;
+ margin:10px;
+ padding:4px 0;
+ float:left;
+}
+
+#monitors p{
+ margin:0;
+ line-height:13px;
+ padding:0;
+}
+
+#monitors dl{
+ color:#7F7FB2;
+ float:left;
+ margin-top:5px;
+ width:100%;
+}
+
+#monitors dl dt{
+ border-top:1px solid #000;
+ float:left;
+ font-weight:bold;
+ width:80px;
+ margin:0;
+}
+#monitors dl dd{
+ border-top:1px solid #000;
+ float:left;
+ text-align:left;
+ width:70px;
+}
+
+/* Clearfix */
+ .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+
+.clearfix {display: inline-block;}  /* for IE/Mac */
+
+/* Navigation bar */
+
+#nav{
+ background-color:#036;
+ border-bottom:2px solid #336699;
+ width:100%;
+ font-size:120%;
+ margin-bottom:10px;
+}
+
+#nav ul{
+ background-color:#036;
+ color:#fff;
+ float:left;
+ margin-left:100px;
+}
+
+#nav ul li{display:inline;}
+#nav li a#dashboard{
+ background-image:url('../graphics/dashboard.png');
+}
+#nav li a#events{
+ background-image:url('../graphics/events.png');
+}
+#nav li a#administration{
+ background-image:url('../graphics/administration.png');
+}
+#nav li a#options{
+ background-image:url('../graphics/options.png');
+}
+#nav li a#performance{
+ background-image:url('../graphics/performance.png');
+}
+#nav li a{
+ padding:20px 1em 20px 50px;
+ background-color:#036;
+ background-repeat:no-repeat;
+ background-position:5px 50%;
+ color:#fff;
+ text-decoration:none;
+ float:left;
+ border-right:1px solid #fff;
+}
+
+#nav ul li a:hover, #nav ul li a.active {
+ background-color:#369;
+ color:#fff;
+}
+
+
+
+/* Monitor History */
+#monitorHistory{
+clear:both;
+padding:0 10px;
+}
+#monitorHistory li{
+ float:left;
+ padding:10px;
+}
+
+#sidebar{
+float:left;
+width:14.8461em;
+position:relative;
+}
+
+#sidebarHistory{
+ text-align:left;
+}
+
+#sidebarHistory h2 {
+ text-align:center;
+}
+
+#sidebarHistory fieldset {
+ border-top:1px solid #000;
+}
+
+#sidebarHistory fieldset legend {
+ color:#000066;
+ font-weight:bold;
+ padding:2px 3px;
+}
+
+#contentcolumn{
+ margin-left:200px;
+}
+
+#loading {
+ width: 100%;
+ position: absolute;
+}
+.pagination{
+ clear:both;
+ margin:0px auto;
+ width:500px;
+}
+.pagination li {
+ padding:5px;
+ margin:2px;
+ list-style: none;
+ float: left;
+ border:solid 1px #dddddd;
+ color:#0063DC;
+}
+.pagination li:hover {
+ color:#FF0084;
+ cursor: pointer;
+}
+
+.pagination li.curPage {
+ font-weight:bold;
+ background-color:#0063DC;
+ color:#ffffff;
+}
+
+.pages {
+ margin-top:10px;
+ text-align:center;
+ font-size:115%;
+}
+
+#tblMonitors {
+ width:800px;
+ margin:0 auto;
+}
+
+.mon{
+}
+.mon_header{
+ border-bottom:1px solid #000;
+ margin-bottom:5px;
+ text-align:left;
+ padding:0 5px 5px 5px;
+}
+.mon_header .right{
+ text-align:right;
+ float:right;
+}
+.mon_header .spinner{
+ display:inline;
+}
+.mon_header .minimize, .mon_header .maximize
+{
+ display:inline;
+}
+
+/* Filter Sidebar */
+#sidebarHistory fieldset {
+ margin-bottom:10px;
+}
+#monitors_search input{
+ margin-left:5px;
+}
+#monitors_search label{
+ margin-left:5px;
+}
+.filter label {
+ float:left;
+ font-weight:bold;
+ width:45px;
+ text-align:right;
+}
+.filter input {
+ width:105px;
+ margin-top:3px;
+ margin-left:5px;
+}
+#filterSubmit {
+ margin-top:20px;
+ text-align:center;
+}
+
+/* Filter Sidebar */
+
+.eventImage{
+display:block;
+}
+
+.eventImageHide{
+display:none;
+}
+
+#eventStream{
+ -moz-border-radius:5px;
+ -webkit-border-radius:5px;
+ border:2px solid #336699;
+ background-color:#EEEEEE;
+ padding:4px;
+}
+
+#videoExport{
+ padding-top:4px;
+}
+
+#imageFeed{
+ padding:5px 0;
+}
+
+.left{text-align:left;}
+.right{text-align:right;}
+
+#stills{
+list-style-type:none;
+padding:10px;
+}
+#stills li{
+ float:left;
+ margin:10px;
+}
+
+.bold{font-weight:bold;}
+.left{
+ float:left;
+ text-align:left;
+ width:25%;
+}
+.center{
+ float:left;
+ text-align:center;
+ margin:0 auto;
+ width:50%;
+}
+.right{
+ display:inline;
+ width:25%;
+ text-align:right;
+}
+
+#ad-video{display:none;}
+
+.ad-thumb-list li p{
+ font-size:115%;
+}
+
+#widget_actions li{
+ display:inline;
+}
+
+.thumb{
+ background-color:#EEEEEE;
+ border:2px solid #336699;
+ display:inline-block;
+ margin:5px;
+ padding:4px;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+.nameleft {
+	white-space:nowrap;
+	float:left;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow: ellipsis;
+	-moz-binding:url('ellipsis.xml#ellipsis');
+}
